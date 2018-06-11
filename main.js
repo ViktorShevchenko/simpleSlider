@@ -4,9 +4,6 @@ var btn_next = document.querySelector("#gallery .buttons .next");
 
 var images = document.querySelectorAll("#gallery .photos img");
 
-var btn_prev = document.querySelector(".prev");
-var btn_next = document.querySelector(".next");
-
 var i = 0;
 
 btn_prev.onclick = function(){
@@ -26,11 +23,6 @@ btn_next.onclick = function(){
 	}
 	images[i].className = "showed";
 }
-
-
-
-
-
 
 
 
