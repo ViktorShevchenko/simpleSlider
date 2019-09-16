@@ -1,34 +1,30 @@
+let btn_prev = document.querySelector('.prev');
+let btn_next = document.querySelector('.next');
+let images = document.querySelectorAll('#gallery .photos img');
 
-var btn_prev = document.querySelector("#gallery .buttons .prev");
-var btn_next = document.querySelector("#gallery .buttons .next");
+let i = 0;
 
-var images = document.querySelectorAll("#gallery .photos img");
+btn_prev.addEventListener('click', prev_image_show);
+btn_next.addEventListener('click', next_image_show);
 
-var i = 0;
-
-btn_prev.onclick = function(){
-	images[i].className = "";
+function prev_image_show(){
+	images[i].className = '';
 	i--;
 	if(i < 0){
 		i = images.length - 1;
 	}
-	images[i].className = "showed";
+	images[i].className = 'showed';
+
 }
 
-btn_next.onclick = function(){
-	images[i].className = "";
+function next_image_show(){
+	images[i].className = '';
 	i++;
-	if(i >= images.length){
+	if(i >=images.length){
 		i = 0;
 	}
-	images[i].className = "showed";
+	images[i].className = 'showed';
 }
-
-
-
-
-
-
 
 
 
